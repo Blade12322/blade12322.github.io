@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Signal</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen">
+    <!-- Невидимая, но кликабельная кнопка поверх нижней части экрана -->
+    <button id="signalButton" class="signal-hit-area" aria-label="Получить сигнал">
+      Signal
+    </button>
+
+    <div id="resultBox" class="result-box hidden">
+      <div class="result-inner">
+        <div class="result-title">Сигнал</div>
+        <div class="result-spins">
+          До бонуски осталось
+          <span id="spinsValue">—</span>
+          вращений
+        </div>
+        <button id="closeResult" class="close-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
