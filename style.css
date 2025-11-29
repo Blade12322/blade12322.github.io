@@ -29,17 +29,18 @@ body {
   justify-content: center;
 }
 
-/* Кликабельная область: вся зона "кнопки" внизу экрана */
+/* Кликабельная область: вся зона золотой кнопки SIGNAL */
 .signal-hit-area {
   position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 420px;
-  height: 120px;           /* высокая зона, чтобы перекрыть всю кнопку */
-  margin-bottom: 6vh;      /* поднимаем на уровень, где находится кнопка на картинке */
+  height: 120px;          /* перекрывает всю кнопку целиком */
+  margin-bottom: 6vh;     /* поднимаем на уровень кнопки на картинке */
   border-radius: 999px;
   border: none;
   background: transparent;
   cursor: pointer;
+
   /* текст прячем, чтобы не закрывать картинку */
   color: transparent;
   text-indent: -9999px;
