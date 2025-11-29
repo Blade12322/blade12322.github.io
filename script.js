@@ -1,6 +1,6 @@
 function getRandomSpins() {
   // целое число от 1 до 100
-  return Math.floor(Math.random() * 50) + 1;
+  return Math.floor(Math.random() * 100) + 1;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -9,16 +9,18 @@
 </head>
 <body>
   <div class="screen">
-    <!-- Невидимая, но кликабельная кнопка поверх надписи SIGNAL на картинке -->
-    <button id="signalButton" class="signal-hit-area" aria-label="Получить сигнал">
-      Signal
+    <img src="bg.jpg" alt="" class="bg-image">
+
+    <!-- Кнопка с картинкой SIGNAL -->
+    <button id="signalButton" class="signal-btn" aria-label="Получить сигнал">
+      <img src="signal-btn.png" alt="Signal" class="signal-img">
     </button>
 
     <div id="resultBox" class="result-box hidden">
       <div class="result-inner">
         <div class="result-title">Сигнал</div>
         <div class="result-spins">
-          До бонусного вращения осталось
+          До бонуски осталось
           <span id="spinsValue">—</span>
           вращений
         </div>

@@ -20,30 +20,42 @@ body {
   height: 100vh;
   max-height: 1024px;
   margin: 0 auto;
-  background-image: url("bg.jpg");
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Кнопка с картинкой SIGNAL */
+.signal-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 6vh;
+  transform: translateX(-50%);
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 }
 
-/* Кликабельная область: вся зона золотой кнопки SIGNAL */
-.signal-hit-area {
-  position: relative;
-  width: 80%;
+.signal-img {
+  width: 82vw;
   max-width: 420px;
-  height: 120px;          /* перекрывает всю кнопку целиком */
-  margin-bottom: 6vh;     /* поднимаем на уровень кнопки на картинке */
-  border-radius: 999px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  height: auto;
+  transition: transform 0.08s ease-out, filter 0.08s ease-out;
+}
 
-  /* текст прячем, чтобы не закрывать картинку */
-  color: transparent;
-  text-indent: -9999px;
+.signal-btn:active .signal-img {
+  transform: scale(0.96);
+  filter: brightness(0.9);
 }
 
 /* Блок с результатом */
@@ -53,11 +65,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0.9)
-  );
+  background: radial-gradient(circle at top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
   backdrop-filter: blur(4px);
   padding: 16px;
   animation: fadeIn 0.15s ease-out;
@@ -70,7 +78,7 @@ body {
 .result-inner {
   width: 100%;
   max-width: 360px;
-  background: rgba(15, 11, 28, 0.95);
+  background: rgba(15, 11, 28, 0.96);
   border-radius: 16px;
   padding: 16px 18px 18px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
@@ -126,7 +134,7 @@ body {
 }
 
 @media (max-aspect-ratio: 3/5) {
-  .signal-hit-area {
-    margin-bottom: 8vh;
+  .signal-btn {
+    bottom: 8vh;
   }
 }
